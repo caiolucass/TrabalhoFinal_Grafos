@@ -1,0 +1,7 @@
+AED;Caram;3
+Sistemas Operacionais;Paulo;3
+Redes;Michelle;4
+Grafos;Michelle;3
+Testes;Claudiney;4
+Banco de Dados;Claudiney;4
+Projeto de Redes;Michelle;5

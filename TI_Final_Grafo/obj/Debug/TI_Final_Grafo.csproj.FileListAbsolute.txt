@@ -1,0 +1,14 @@
+C:\Users\Wernen\source\repos\TI_Final_Grafo\TI_Final_Grafo\bin\Debug\TI_Final_Grafo.exe.config
+C:\Users\Wernen\source\repos\TI_Final_Grafo\TI_Final_Grafo\bin\Debug\TI_Final_Grafo.exe
+C:\Users\Wernen\source\repos\TI_Final_Grafo\TI_Final_Grafo\bin\Debug\TI_Final_Grafo.pdb
+C:\Users\Wernen\source\repos\TI_Final_Grafo\TI_Final_Grafo\obj\Debug\TI_Final_Grafo.csprojAssemblyReference.cache
+C:\Users\Wernen\source\repos\TI_Final_Grafo\TI_Final_Grafo\obj\Debug\TI_Final_Grafo.csproj.CoreCompileInputs.cache
+C:\Users\Wernen\source\repos\TI_Final_Grafo\TI_Final_Grafo\obj\Debug\TI_Final_Grafo.exe
+C:\Users\Wernen\source\repos\TI_Final_Grafo\TI_Final_Grafo\obj\Debug\TI_Final_Grafo.pdb
+C:\Users\caioz\OneDrive\Documentos\TI_Final_Grafo\TI_Final_Grafo\obj\Debug\TI_Final_Grafo.csprojAssemblyReference.cache
+C:\Users\caioz\OneDrive\Documentos\TI_Final_Grafo\TI_Final_Grafo\obj\Debug\TI_Final_Grafo.csproj.CoreCompileInputs.cache
+C:\Users\caioz\OneDrive\Documentos\TI_Final_Grafo\TI_Final_Grafo\obj\Debug\TI_Final_Grafo.exe
+C:\Users\caioz\OneDrive\Documentos\TI_Final_Grafo\TI_Final_Grafo\obj\Debug\TI_Final_Grafo.pdb
+C:\Users\caioz\OneDrive\Documentos\TI_Final_Grafo\TI_Final_Grafo\bin\Debug\TI_Final_Grafo.exe.config
+C:\Users\caioz\OneDrive\Documentos\TI_Final_Grafo\TI_Final_Grafo\bin\Debug\TI_Final_Grafo.exe
+C:\Users\caioz\OneDrive\Documentos\TI_Final_Grafo\TI_Final_Grafo\bin\Debug\TI_Final_Grafo.pdb
