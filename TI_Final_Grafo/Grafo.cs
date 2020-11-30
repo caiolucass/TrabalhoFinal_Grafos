@@ -33,27 +33,30 @@ namespace TI_Final_Grafos
         }
 
         //Método para adicionar vértice de professor
-        public void add_Professor(Professor professorp)
+        public void add_Professor(Professor professores, Disciplina disciplinas)
         {
-            var prof_aux = new Professor(professorp.get_Nome(),professorp.get_Disciplina() );
+           
+            var prof_aux = new Professor(professores.Nome_Professor, disciplinas);
 
             //verificar se disciplina contem disciplina registrada
             if (professor.Contains(prof_aux))
             {
-                professor.OrderBy(p => professorp.get_Nome()).ToList();
-            }
-            else professor.Add(prof_aux);   
+              //  professor.OrderBy(p => professores.Nome_Professor).ToList();
+            }          
+            else professor.Add(prof_aux);
+
+          
         }    
 
         //Método para adicionar vértice de horario do professor
         public void add_Horario(Horario horarioh, Disciplina disciplinad)
         {
-            var horario_aux = new Horario(horarioh.get_Horario(), disciplinad);
+            var horario_aux = new Horario(horarioh.Horarios, disciplinad);
 
             //verificar se horario contem horario registrado
             if (horario.Contains(horario_aux))
             {            
-                horario.OrderBy(h => horarioh.get_Horario()).ToList();
+                horario.OrderBy(h => horarioh.Horarios).ToList();
             }
             else horario.Add(horario_aux);
         }
@@ -66,9 +69,9 @@ namespace TI_Final_Grafos
             {
                 for (int x = 1; x < numero_Vertice; x++)
                 {
-                    if (matriz_dissimilaridade[v1.get_Vertice(), v2.get_Vertice()] == 1)
+                    if (matriz_dissimilaridade[v1.Vertices, v2.Vertices] == 1)
                     {
-                        Console.WriteLine("Os vértices são adjacentes: " + v1.get_Vertice(), v2.get_Vertice());
+                        Console.WriteLine("Os vértices são adjacentes: " + v1.Vertices, v2.Vertices);
                         return true;
                     }
                 }
@@ -83,7 +86,7 @@ namespace TI_Final_Grafos
 
             for (int i = 1; i < this.numero_Vertice; i++)
             {
-                if (matriz_dissimilaridade[v.get_Vertice(), i] == 1)
+                if (matriz_dissimilaridade[v.Vertices, i] == 1)
                 {
                     grau_vertice++;
                 }
@@ -97,12 +100,12 @@ namespace TI_Final_Grafos
             Aresta aresta = new Aresta();
             foreach (var h in arestas.ToList())
             {
-                if (arestas.Where(a => a.get_Horario() == h.get_Horario()).Count() > 2)
+                if (arestas.Where(a => a.Horario == h.Horario).Count() > 2)
                 {
                     arestas.Remove(h);
                 }
             }
-            arestas = arestas.OrderBy(h => h.get_Horario()).ToList();
+            arestas = arestas.OrderBy(h => h.Horario).ToList();
         }
 
         
@@ -111,7 +114,7 @@ namespace TI_Final_Grafos
         {
             for (int i = 0; i < list_vertices.Count(); i++)
             {
-                if (list_vertices[i].get_Vertice() == v.get_Vertice())
+                if (list_vertices[i].Vertices == v.Vertices)
                 {
                     Console.WriteLine(list_vertices[i]);
                     return list_vertices[i];
@@ -125,27 +128,16 @@ namespace TI_Final_Grafos
         {
             //percorre a lista de professores e disciplinas
             Console.WriteLine("\n=====Informações dos Professores======");
-            foreach (Professor p in professor)
-            {
-                Console.WriteLine("Professor: " + p.get_Nome() + "\t" + "Disciplina: "
-                                  +  p.get_Disciplina());
-            }
-
+            professor.ForEach(lv => Console.WriteLine("Professor: " + lv.Nome_Professor + "\t" +  "Disciplina: " + lv.Nome_disciplina.Disciplinas));
+            
              //percorre a lista de de horarios
             Console.WriteLine("\n=====Informações dos Horarios======");
-            foreach (Horario h in horario)
-            {
-                Console.WriteLine("Horario: " + h.get_Horario() + "\t" + "Disciplina: "
-                                 + h.get_Disciplina());
-            }
-
+            horario.ForEach(lv => Console.WriteLine("Horario: " + lv.Horarios + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas));
+           
             //percorre a lista de arestas
             Console.WriteLine("\n=====Informação geral=======");
-            foreach (Aresta a in arestas)
-            {
-                Console.WriteLine("Professor:" + a.get_Professor() + "Disciplinas:" +
-                    a.get_Disciplina() + "Horario:" + a.get_Horario());
-            }
+            arestas.ForEach(lv => Console.WriteLine("Professor: " + lv.Professor.Nome_Professor + "\t" + "Disciplina: " + lv.Disciplina.Disciplinas + "\t" + "Horario: " + lv.Horario.Horarios));
+           
         }
 
         //Sessão de Getters e Setters

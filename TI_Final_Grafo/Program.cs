@@ -29,7 +29,7 @@ namespace TI_Final_Grafos
                 professor = new Professor(split[1]);
                 horario = new Horario(Convert.ToInt32(split[2]));
 
-                grafo.add_Professor(professor);
+                grafo.add_Professor(professor, disciplina);
                 grafo.add_Horario(horario, disciplina);
                 //grafo.procurar_Vertice(vertice);
                 grafo.add_Aresta(professor, disciplina, horario);

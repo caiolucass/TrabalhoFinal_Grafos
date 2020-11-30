@@ -10,8 +10,11 @@ namespace TI_Final_Grafos
 {
     public class Vertice
     {
-        private int vertice; //vertice
+        private int vertices; //vertice
         private int grau_Vertice; //grau do vertice
+
+        public int Vertices { get => vertices; set => vertices = value; }
+        public int Grau_Vertice { get => grau_Vertice; set => grau_Vertice = value; }
 
         //Construtor
         public Vertice() { }
@@ -19,21 +22,21 @@ namespace TI_Final_Grafos
         //Contrutor
         public Vertice(int vertice, int grau_Vertice)
         {
-            this.vertice = vertice;
-            this.grau_Vertice = grau_Vertice;
+            this.Vertices = vertice;
+            this.Grau_Vertice = grau_Vertice;
         }
         //Construtor de vertice
         public Vertice(int vertice)
         {
-            this.vertice = vertice;
+            this.Vertices = vertice;
         }
 
         //Retorna se os objetos são iguais
         public override bool Equals(object o)
         {
             //Verifica se os objetos possuem o mesmo tipo e valor
-            if ((o as Vertice).vertice == this.vertice &&
-               (o as Vertice).grau_Vertice == this.grau_Vertice)
+            if ((o as Vertice).Vertices == this.Vertices &&
+               (o as Vertice).Grau_Vertice == this.Grau_Vertice)
             {
                 return true;
             }
@@ -42,23 +45,6 @@ namespace TI_Final_Grafos
                 return false;
             }
         }
-
-        //Seção de Getters e Setters
-        public int get_GrauVertice()
-        {
-            return grau_Vertice;
-        }
-        public void set_GrauVertice(int grau_Vertice)
-        {
-            this.grau_Vertice = grau_Vertice;
-        }
-        public int get_Vertice()
-        {
-            return vertice;
-        }
-        public void set_Vertice(int vertice)
-        {
-            this.vertice = vertice;
-        }
+       
     }
 }

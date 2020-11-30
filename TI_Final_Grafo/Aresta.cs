@@ -16,42 +16,19 @@ namespace TI_Final_Grafos
         private Horario horario; // horario das disciplina e do professor
         private Disciplina disciplina; //disciplina do professor
 
+        public Professor Professor { get => professor; set => professor = value; }
+        public Horario Horario { get => horario; set => horario = value; }
+        public Disciplina Disciplina { get => disciplina; set => disciplina = value; }
+
         public Aresta() { }
 
         //Construtor da classe arestas
         public Aresta(Professor professor, Disciplina disciplina, Horario horario)
         {
-            this.professor = professor;
-            this.horario = horario;
-            this.disciplina = disciplina;
+            this.Professor = professor;
+            this.Horario = horario;
+            this.Disciplina = disciplina;
         }
 
-        //Seção de Getters e Setters
-        public Professor get_Professor()
-        {
-            return professor;
-        }
-        public void set_Professor(Professor professor)
-        {
-            this.professor = professor;
-        }
-
-        public Horario get_Horario()
-        {
-            return horario;
-        }
-        public void set_Horario(Horario horario)
-        {
-            this.horario = horario;
-        }
-
-        public Disciplina  get_Disciplina()
-        {
-            return disciplina;
-        }
-        public void  set_Disciplina(Disciplina disciplina)
-        {
-            this.disciplina = disciplina;
-        }
     }
 }

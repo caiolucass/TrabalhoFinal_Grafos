@@ -23,21 +23,19 @@ namespace TI_Final_Grafos
             this.disciplinas = disciplinas;
         }
 
+        public string Disciplinas { get { return disciplinas; } }
+
+        public override int GetHashCode()
+        {
+            return this.disciplinas.GetHashCode();
+        }
         //Retorna se os objetos são iguais
         public override bool Equals(object o)
         {
             return this.disciplinas == (o as Disciplina).disciplinas;
         }
 
-        //Seção de Getters e Setters
-        public string get_Disciplinas()
-        {
-            return disciplinas;
-        }
-        public void set_Disciplinas(string disciplinas)
-        {
-            this.disciplinas = disciplinas;
-        }
+
     }
 }
 
